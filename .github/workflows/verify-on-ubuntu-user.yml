@@ -1,4 +1,5 @@
 on:
+  workflow_dispatch:
   push:
   pull_request_target:
     branches: [master]
@@ -13,11 +14,12 @@ jobs:
     - name: Mirror Github to Gitee with white list
       uses: ./.
       with:
-        src: github/Yikun
-        dst: gitee/yikunkero
+        src: github/logep
+        dst: gitee/altz
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token:  ${{ secrets.GITEE_TOKEN }}
         static_list: 'hub-mirror-action,hashes, simple-spring'
         force_update: true
-        debug: true
-        mappings: 'hashes=>hashes_gitee'
+        white_list: 'life-record, logep.github.io'
+        account_type: user
+        timeout: 300
