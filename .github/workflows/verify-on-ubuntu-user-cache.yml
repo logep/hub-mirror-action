@@ -2,7 +2,7 @@ on:
   push:
   pull_request_target:
     branches: [main]
-name: Tests / test-user-mirror (cached)
+name: Tests user-mirror (cached)
 jobs:
   run:
     name: Run
