@@ -3,6 +3,11 @@ on:
   push:
   pull_request_target:
     branches: [master]
+    
+  schedule:
+    # UTC 17:00 -> CST (China) 1:00 see https://datetime360.com/cn/utc-cst-china-time/
+    - cron: '19 17 * * *'
+    
 name: Tests / test-user-mirror
 jobs:
   run:
