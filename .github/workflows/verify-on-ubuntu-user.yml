@@ -23,9 +23,8 @@ jobs:
         dst: gitee/altz
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token:  ${{ secrets.GITEE_TOKEN }}
-        static_list: 'life-record,life-sync, logep.github.io'
-        force_update: true
-        white_list: 'life-record,life-sync, logep.github.io'
+        static_list: 'life-record,logep.github.io'
+       # force_update: true
+        white_list: 'life-record, logep.github.io'
         account_type: user
-        dst_visibility: 'private'
         timeout: 300
