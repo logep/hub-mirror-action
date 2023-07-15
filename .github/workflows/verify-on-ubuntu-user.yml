@@ -27,4 +27,5 @@ jobs:
         force_update: true
         white_list: 'life-record,life-sync, logep.github.io'
         account_type: user
+        dst_visibility: 'private'
         timeout: 300
