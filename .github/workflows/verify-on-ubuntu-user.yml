@@ -20,7 +20,7 @@ jobs:
       uses: ./.
       with:
         src: github/logep
-        dst: gitee/altz
+        dst: gitee/${{secrets.GITEE_REPO}}
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token:  ${{ secrets.GITEE_TOKEN }}
         static_list: 'life-record,logep.github.io'
